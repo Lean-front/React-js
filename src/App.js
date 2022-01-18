@@ -7,11 +7,13 @@ function App() {
 
   return (
     <>
-      <div class="menu">
+      <div className="menu">
         <Navbar />
         <Cart />
       </div>
-      <ItemListContainer items="Catálogo"/>      
+      <div className='Productos'>
+        <ItemListContainer />
+      </div>
     </>
   );
 }
