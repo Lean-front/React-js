@@ -12,9 +12,11 @@ export default function ItemCount({ max, min }) {
     }
     return (
         <>
-            <button className="BotonNegativo" onClick={resta}>-</button>
-            {amount}
-            <button className="BotonPositivo" onClick={sumar}>+</button>
+            <div className="ContenedorBotonesNegPos">
+                <button className="BotonNegativo" onClick={resta}>-</button>
+                <p className="Cantidad">{amount}</p>
+                <button className="BotonPositivo" onClick={sumar}>+</button>
+            </div>
         </>
     )
 }

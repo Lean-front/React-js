@@ -1,7 +1,7 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 
-export default function Products({ items }) {
+export default function Item({ items }) {
 
     function onAdd() {
         alert("El producto ha sido agregado");
@@ -11,6 +11,7 @@ export default function Products({ items }) {
             <div className="ContenedorProductos">
                 <p>{items.name}</p>
                 <p>Cantidad disponible: {items.stock}</p>
+                <p>Precio: {items.precio}</p>
                 <ItemCount max={items.stock} min={items.initial} />
                 <br />
                 <button className="BotonAgregar" onClick={() => onAdd()}>AGREGAR</button>

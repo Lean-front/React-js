@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import Products from "./Products";
+import React, { useEffect, useState } from "react";
+import Item from "./ItemList";
 
 export default function ItemListContainer() {
-    
-    const [arrayProductos, setArrayProductos] = useState([
-        { name: "producto1", stock: 10, initial: 0 },
-        { name: "producto2", stock: 15, initial: 0 },
-        { name: "producto3", stock: 20, initial: 0 },
-    ]);
+
+    const [arrayProductos, setArrayProductos] = useState([]);
+
+    const listaProductos = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([
+                { id:"1", name: "producto1", stock: 30, initial: 0, precio:"30000", pictureURL: "url"},
+                { id:"2", name: "producto2", stock: 25, initial: 0, precio:"25000", pictureURL: "url"},
+                { id:"3", name: "producto3", stock: 40, initial: 0, precio:"27000", pictureURL: "url"},
+            ])
+        }, 2000)
+    })
+
+    useEffect(()=>{
+        listaProductos
+        .then(res => {setArrayProductos(res)})
+    })
 
     return (
         <>
-            {
-                arrayProductos.map(items => <Products items={items} />)
-            }
+           {arrayProductos.map(items => <Item items={items} />)}
         </>
     );
 }
