@@ -15,16 +15,16 @@ function App() {
           <Cart />
         </div>
         <Switch>
-          <Route exact patch="/">
+          <Route exact path="/">
             <div className='Productos'>
               <ItemListContainer />
             </div>
           </Route>
-          <Route exact patch="/item/:itemId">
+          <Route path="/item/:itemId">
               <ItemDetailContainer />
           </Route>
-          <Route exact patch="/categoria">CATEGORIAS</Route>
-          <Route exact patch="/carrito">CARRITO</Route>
+          <Route exact path="/sobre">CATEGORIAS</Route>
+          <Route exact path="/contacto">CONTACTO</Route>
         </Switch>
       </BrowserRouter>
     </>

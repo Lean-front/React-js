@@ -27,11 +27,11 @@ export default function ItemDetailContainer() {
             setProductId(Product);
 
         }, 2000)
-    },[itemId])
+    }, [itemId])
 
     return (
         <>
-            <ItemDetail productId={productId}/>
+            <ItemDetail productId={productId} />
         </>
     );
 }

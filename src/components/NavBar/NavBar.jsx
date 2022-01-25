@@ -7,8 +7,8 @@ export default function NavBar() {
             <ul>
                 <li><Link to={"/"}>INICIO</Link></li>
                 <li>TIENDA</li>
-                <li>SOBRE NOSOTROS</li>
-                <li>CONTACTO</li>
+                <li><Link to={"/sobre"}>SOBRE NOSOTROS</Link></li>
+                <li><Link to={"/contacto"}>CONTACTO</Link></li>
             </ul>
         </>
     )

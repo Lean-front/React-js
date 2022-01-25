@@ -1,22 +1,24 @@
 import React from "react";
 
-export default function ItemDetail({ productoId }) {
+export default function ItemDetail({ productId }) {
 
     return (
         <>
             <div>
-                {(productoId.id) ?
+                {(productId.id) ?
                     <>
                         <div className="ContenedorDetalle">
-                            <p>{productoId.name}</p>
-                            <p>{productoId.pictureURL}</p>
-                            <p>Cantidad disponible: {productoId.stock}</p>
-                            <p>Precio: {productoId.precio}</p>
-                            <p>Tipo: {productoId.categoria}</p>
+                            <div className="Detalle">
+                                <p>{productId.name}</p>
+                                <p>{productId.pictureURL}</p>
+                                <p>Cantidad disponible: {productId.stock}</p>
+                                <p>Precio: {productId.precio}</p>
+                                <p>Tipo: {productId.categoria}</p>
+                            </div>
                         </div>
                     </>
                     :
-                    <>Cargando...</>
+                    <>Cargando producto...</>
                 }
             </div>
         </>
