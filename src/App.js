@@ -1,8 +1,8 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Cart from './components/NavBar/CartWidget';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './components/ItemList/ItemListContainer';
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -20,10 +20,15 @@ function App() {
               <ItemListContainer />
             </div>
           </Route>
-          <Route path="/item/:itemId">
-              <ItemDetailContainer />
+          <Route path="/categoria/:categoriaId">
+            <div className='Productos'>
+              <ItemListContainer />
+            </div>
           </Route>
-          <Route exact path="/sobre">CATEGORIAS</Route>
+          <Route path="/item/:itemId">
+            <ItemDetailContainer />
+          </Route>
+          <Route exact path="/sobre">SOBRE NOSOTROS</Route>
           <Route exact path="/contacto">CONTACTO</Route>
         </Switch>
       </BrowserRouter>
