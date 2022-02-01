@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ItemCount({ max, min }) {
+export default function ItemCount({ max, min, onAdd }) {
 
     const [amount, setAmount] = useState(0);
 
@@ -10,12 +10,14 @@ export default function ItemCount({ max, min }) {
     function resta() {
         if (amount > min) setAmount(amount - 1)
     }
+
     return (
         <>
             <div className="ContenedorBotonesNegPos">
                 <button className="BotonNegativo" onClick={resta}>-</button>
                 <p className="Cantidad">{amount}</p>
                 <button className="BotonPositivo" onClick={sumar}>+</button>
+                <button className="BotonAgregar" onClick={() => onAdd(amount)}>AGREGAR</button>
             </div>
         </>
     )
