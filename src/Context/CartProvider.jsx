@@ -1,0 +1,39 @@
+import React, { createContext, useState } from "react";
+
+export const cartContext = createContext();
+
+const CartProvider = ({children}) => {
+
+    const [carrito, setCarrito] = useState([]);
+
+    const addItem = (productId, amount) =>{
+        if (isInCart(productId.id)){
+            const indexItem = carrito.findIndex(e => e.item.id === productId.id)
+            carrito[indexItem].amount = carrito[indexItem].amount + amount;
+            setCarrito([...carrito]);       
+        }else{
+        setCarrito([...carrito, {item: productId, amount}])
+        }
+    }
+
+    const removeItem = (id) =>{
+        const reCarrito = carrito.filter(e => e.item.id !== id)
+        setCarrito(reCarrito);
+    }
+
+    const clear = () => {
+        setCarrito([])
+    }
+
+    const isInCart = (id) =>{
+        return carrito.some(Element => Element.item.id === id)
+    }
+
+    return(
+        <cartContext.Provider value={{carrito, addItem, removeItem, clear}}>
+            {children}
+        </cartContext.Provider>
+    )
+}
+
+export default CartProvider; 

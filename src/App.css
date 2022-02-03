@@ -25,6 +25,28 @@ ul{
   font-family: 'Karla', sans-serif;
   font-weight: lighter;
 }
+.BotonCarrito{
+  border: none;
+  width: 70px;
+  background-image: linear-gradient(#373549, rgb(35, 51, 65));
+}
+.BotonCarrito:hover{
+  background-image: linear-gradient(#5b586e, rgb(54, 71, 87));
+}
+.carrito{
+  height: 40px;
+}
+.carritoContador{
+  color: white;
+  font-size: 20px;
+  background-color: #5c5a6d;
+  border-radius: 5px;
+}
+.ContenedorCarrito{
+  text-align: center;
+  width: 100%;
+  margin: 50px 0px 40px 0px;
+}
 .Link{
   text-decoration: none;
   color: white;
@@ -38,11 +60,6 @@ ul{
 }
 h1{
   text-align: center;
-}
-.carrito{
-  height: 50px;
-  border: white 1px solid;
-  border-radius: 20px;
 }
 .Productos{
   display: flex;
