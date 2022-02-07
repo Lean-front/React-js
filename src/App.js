@@ -8,12 +8,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/CartProvider';
 
-
 function App() {
 
   return (
     <>
-      <CartProvider>
+     <CartProvider>
         <BrowserRouter>
           <div className="menu">
             <NavBar />

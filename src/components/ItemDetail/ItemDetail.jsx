@@ -10,7 +10,7 @@ export default function ItemDetail({ productId }) {
     const [count, setCount] = useState(true);
 
     function onAdd(amount) {
-        alert("Has agregado:"+ productId.name + "cantidad:" + amount);
+        console.log("Has agregado:"+ productId.name + "cantidad:" + amount);
         addItem(productId, amount);
         setCount(false);
     };

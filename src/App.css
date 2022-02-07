@@ -47,6 +47,11 @@ ul{
   width: 100%;
   margin: 50px 0px 40px 0px;
 }
+.CarritoTotal{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 0px 15px 0px;
+}
 .Link{
   text-decoration: none;
   color: white;
@@ -149,6 +154,24 @@ h1{
 .BotonVerCarrito:hover{
   color: rgb(41, 66, 83);
   background-color: rgb(78, 102, 119);  
+}
+.BotonVerProductos{
+  width: 250px;
+  height: 30px;
+  color: white;
+  background-color: rgb(105, 115, 122);
+}
+.BotonFinCompra{
+  width: 250px;
+  height: 30px;
+  color: white;
+  background-color: rgb(105, 115, 122);
+}
+.BotonCarritoVaciar{
+  width: 250px;
+  height: 30px;
+  color: white;
+  background-color: rgb(105, 115, 122);
 }
 /*CARGA*/
 .Carga{
