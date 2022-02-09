@@ -6,6 +6,7 @@ import carrito from "../../img/carrito.png"
 const CartWidget = () => {
 
     const { amountInCart } = useContext(cartContext)
+    
 
     return (
         <>

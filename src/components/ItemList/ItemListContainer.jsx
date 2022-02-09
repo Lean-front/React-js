@@ -1,7 +1,82 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getFirestore } from "../../Firebase/firebase"
 import Item from "./Item";
 
+export default function ItemListContainer() {
+
+    const { categoriaId } = useParams();
+
+    const [arrayProductos, setArrayProductos] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        const itemCollection = db.collection("items")
+        itemCollection.get()
+            .then((querySnapShot) => {
+                if (categoriaId > '') {
+                    let prod = querySnapShot.docs.map((doc) => {
+                        return { id: doc.id, ...doc.data() };
+                    });
+                    let categoriaP = prod.filter((items => items.categoria === categoriaId));
+                    setArrayProductos(categoriaP);
+                }
+                else {
+                    setArrayProductos(querySnapShot.docs.map((doc) => {
+                        return { id: doc.id, ...doc.data() };
+                    }))
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }, [categoriaId])
+
+    return (
+        <>
+            {arrayProductos.map(items => <Item items={items} />)}
+        </>
+    );
+}
+/*
+const itemCollection = db.collection("items")
+        itemCollection.get()
+            .then((res) => {
+                if (querySnapShot.size === 0) {
+                    console.log("no hay docs");
+                    return
+                }
+                setArrayProductos(querySnapShot.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data() }
+                    
+                }));
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+*/
+/*
+useEffect(() => {
+        const db = getFirestore();
+        const itemCollection = db.collection("items")
+        itemCollection.get()
+            .then((res) => {
+                if (categoriaId > '') {
+                    let filtroProducto = res.filter(items => items.categoria === categoriaId);
+                    setArrayProductos(filtroProducto.docs.map((doc) => {
+                        return { id: doc.id, ...doc.data() }
+                    }));
+                } else {
+                    setArrayProductos(0)
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    },[categoriaId]);
+*/
+
+/*
 export default function ItemListContainer() {
 
     const { categoriaId } = useParams();
@@ -43,3 +118,5 @@ export default function ItemListContainer() {
     );
 }
 
+
+*/
