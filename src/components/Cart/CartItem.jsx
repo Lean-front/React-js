@@ -7,7 +7,8 @@ const CartItem = ({prod}) => {
 
     return (
         <>
-            <div>
+            <div className="ContenedorCompra">
+                <img className="ProductoEnCarrito" src={prod.item.img} alt="producto"/>
                 <h2>{prod.item.name}</h2>
                 <p>Cantidad: {prod.amount}</p>
                 <button className="BotonNegativo" onClick={() => removeItem(prod.item.id)}>X</button>

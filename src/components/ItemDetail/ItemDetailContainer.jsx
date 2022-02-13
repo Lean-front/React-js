@@ -19,9 +19,6 @@ export default function ItemDetailContainer() {
                 }
                 setProductId({ id: doc.id, ...doc.data() });
             })
-            .catch((err) => {
-                console.log(err);
-            })
     }, [itemId])
 
     return (

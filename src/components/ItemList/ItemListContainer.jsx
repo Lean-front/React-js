@@ -27,9 +27,6 @@ export default function ItemListContainer() {
                     }))
                 }
             })
-            .catch((err) => {
-                console.log(err);
-            })
     }, [categoriaId])
 
     return (

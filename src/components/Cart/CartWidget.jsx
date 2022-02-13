@@ -7,7 +7,6 @@ const CartWidget = () => {
 
     const { amountInCart } = useContext(cartContext)
     
-
     return (
         <>
             <div>

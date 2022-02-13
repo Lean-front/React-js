@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/CartProvider';
+import Form from './components/Cart/Form';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
             </Route>
             <Route exact path="/contacto">CONTACTO</Route>
             <Route path="/cart"><Cart /></Route>
+            <Route path="/finalizar"><Form /></Route>
           </Switch>
           <br />
           <Footer />

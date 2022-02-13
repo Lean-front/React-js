@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
     // Cantidad de productos mostrado en el icono del carrito
     const amountInCart = () =>{
         if (carrito.length === 0){
-            return <span className="carritoContador">0</span>
+            return 
         } else {
             return carrito.map((a) => a.amount).reduce((a,b) => a + b);
         }
