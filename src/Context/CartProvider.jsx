@@ -28,7 +28,7 @@ const CartProvider = ({ children }) => {
     const isInCart = (id) => {
         return carrito.some(Element => Element.item.id === id)
     }
-    // Cantidad de productos mostrado en el icono del carrito
+
     const amountInCart = () =>{
         if (carrito.length === 0){
             return 
@@ -36,7 +36,7 @@ const CartProvider = ({ children }) => {
             return carrito.map((a) => a.amount).reduce((a,b) => a + b);
         }
     }
-    // Precio total de los productos
+
     const fullPrice = () => {
         return carrito
             .map((i) => i.item.precio * i.amount)

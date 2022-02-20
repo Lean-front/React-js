@@ -10,29 +10,34 @@ export default function ItemDetail({ productId }) {
     const [count, setCount] = useState(true);
 
     function onAdd(amount) {
-        console.log("Has agregado:"+ productId.name + "cantidad:" + amount);
         addItem(productId, amount);
         setCount(false);
     };
 
     return (
         <>
-            <div>
+            <div className="ContenedorItemDetail">
                 {(productId.id) ?
                     <>
                         <div className="ContenedorDetalle">
-                            <div className="Detalle">
+                            <div>
+                                <img className="ImagenDetalle" src={productId.img} alt="producto" />
+                            </div>
+                            <div className="ItemCountDetalle">
                                 <h2>{productId.name}</h2>
-                                <img className="ImagenDetalle" src={productId.img} alt="producto"/>
-                                <p>Cantidad disponible: {productId.stock}</p>
-                                <p>Precio: {productId.precio}</p>
-                                <p>Tipo: {productId.categoria}</p>
-                                {
-                                    (count) ?
-                                    <ItemCount max={productId.stock} min={productId.initial} onAdd={onAdd}/>
-                                    :
-                                    <button className="BotonVerCarrito"><Link className="Link"to={"/cart"}>Ver carrito</Link></button>
-                                }
+                                <h3>${productId.precio}</h3>
+                                <h4>Tipo: {productId.categoria}</h4>
+                                <h5>Color: {productId.color}</h5>
+                                <h5>Descripción: {productId.descr}</h5>
+                                <h6>({productId.stock} disponibles)</h6>
+                                <div>
+                                    {
+                                        (count) ?
+                                            <ItemCount max={productId.stock} min={1} onAdd={onAdd} />
+                                            :
+                                            <button className="BotonVerCarrito"><Link className="Link" to={"/cart"}>Ver carrito</Link></button>
+                                    }
+                                </div>
                             </div>
                         </div>
                     </>
@@ -43,34 +48,3 @@ export default function ItemDetail({ productId }) {
         </>
     );
 }
-
-
-
-// { productId, onAdd, added }
-
-
-// <ItemCount max={productId.stock} min={productId.initial} onAdd={onAdd}/>
-/* <div>
-                {(productId.id) ?
-                    <>
-                        <div className="ContenedorDetalle">
-                            <div className="Detalle">
-                                <h2>{productId.name}</h2>
-                                <img className="ImagenDetalle" src={productId.img} />
-                                <p>Cantidad disponible: {productId.stock}</p>
-                                <p>Precio: {productId.precio}</p>
-                                <p>Tipo: {productId.categoria}</p>
-                                {
-                                    (added) ?
-                                    <ItemCount max={productId.stock} min={productId.initial} onAdd={onAdd}/>
-                                    :
-                                    <button className="BotonVerCarrito"><Link className="Link"to={"/cart"}>Ver carrito</Link></button>
-                                }
-                            </div>
-                        </div>
-                    </>
-                    :
-                    <><img className="Carga" src="https://image.flaticon.com/icons/png/512/101/101791.png" /></>
-                }
-            </div>
-             */

@@ -1,22 +1,22 @@
-Leandro Benavides - Primera entrega del proyecto CoderHouse al 27/01/22
+# Tecno-Shop!
 
-Tienda e-commerce computación 
+Tienda e-commerce de computación; consta de 3 categorías (celulares, tablets y notebooks) las cuales se pueden filtar y ver los detalles de cada producto de forma individual y detallada. Se pueden comprar productos hasta acabar stock. El carrito registra las compras del usuario mostrando las cantidades de cada producto adquirido y el monto total a pagar. Para finalizar, el comprador debe completar un formulario con datos personales para poder confirmar su compra y la App le generará un número de orden aprobando su compra. 
 
-La tienda actualmente posee 3 categorias de productos = Celulares, Tablets y Notebooks
+## Demo
 
-Composición: 
+Insert gif or link to demo
+![App](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/iphone11.png?alt=media&token=002d4dc9-7395-4a93-ad49-1502d464a0f8)
 
-1) NavBar [INICIO, CELULARES, TABLETS, NOTEBOOKS, SOBRE NOSOTROS, CONTACTO, CARRITO]
+## Autor
 
-1-a: El botón INICIO carga todos los productos de la tienda
-1-b: Los botones CELULARES, TABLETS Y NOTEBOOKS filtran el contenido de la página colocando solamente los productos seleccionados según su categoría
+- [Leandro Benavides](https://github.com/Lean-front)
 
-2) ItemList [Item, ItemListContainer]
 
-Item: contiene la composición con la cual se distribuiran los datos de un producto
-ItemListContainer: contiene el array de productos y la lógica para filtrarlos segun su categoría
+## Deployment
 
-3) ItemDetail [ItemDetail, ItemDetailContainer]
+To deploy this project run
 
-ItemDetail: contiene la composición con la cual se distribuiran los datos completos de un producto en particular
-ItemDetailContainer: contiene el array de productos y la lógica para ver el detalle completo de un producto seleccionado
+```bash
+  npm run deploy
+```
+

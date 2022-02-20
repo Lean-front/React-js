@@ -7,7 +7,7 @@ export default function Item({ items }) {
         <>
             <div className="ContenedorProductos">
                 <h2>{items.name}</h2>
-                <img className="Imagen" src={items.img} />
+                <img className="Imagen" src={items.img} alt={items.name}/>
                 <p>Cantidad disponible: {items.stock}</p>
                 <p>Precio: {items.precio}</p>
                 <p>Tipo: {items.categoria}</p>

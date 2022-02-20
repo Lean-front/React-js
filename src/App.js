@@ -8,9 +8,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/CartProvider';
 import Form from './components/Cart/Form';
+import About from './components/Pages/About';
+import Contact from './components/Pages/Contact';
 
 function App() {
-
+  
   return (
     <>
      <CartProvider>
@@ -33,7 +35,8 @@ function App() {
             <Route path="/item/:itemId">
               <ItemDetailContainer />
             </Route>
-            <Route exact path="/contacto">CONTACTO</Route>
+            <Route exact path="/sobre"><About /></Route>
+            <Route exact path="/contacto"><Contact /></Route>
             <Route path="/cart"><Cart /></Route>
             <Route path="/finalizar"><Form /></Route>
           </Switch>

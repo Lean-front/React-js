@@ -4,7 +4,9 @@
 *{
   margin: 0;
   padding: 0;
+  top: 100%;
 }
+/*NAVBAR*/
 .menu{
   display: flex;
   flex-wrap: wrap;
@@ -12,26 +14,23 @@
   align-items: center;
   background-image: linear-gradient(#373549, rgb(35, 51, 65));
   height: 60px;
+  position: sticky;
+  top: 0;
 }
 ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   list-style: none;
-  width: 80%;
+  width: 60%;
   font-size: 20px;
   font-weight: bold;
   color: white;
   font-family: 'Karla', sans-serif;
   font-weight: lighter;
 }
-.BotonCarrito{
-  border: none;
-  width: 70px;
-  background-image: linear-gradient(#373549, rgb(35, 51, 65));
-}
-.BotonCarrito:hover{
-  background-image: linear-gradient(#5b586e, rgb(54, 71, 87));
+.TiendaLogo{
+  height: 60%;
 }
 .carrito{
   height: 40px;
@@ -39,8 +38,7 @@ ul{
 .carritoContador{
   color: white;
   font-size: 20px;
-  background-color: #5c5a6d;
-  border-radius: 5px;
+  background-color: #ff0000;
 }
 .ContenedorCarrito{
   text-align: center;
@@ -52,6 +50,7 @@ ul{
   font-weight: bold;
   padding: 15px 0px 15px 0px;
 }
+/*MENU LINKS*/
 .Link{
   text-decoration: none;
   color: white;
@@ -63,6 +62,11 @@ ul{
 .LinkNavBar:hover{
   color: rgb(41, 223, 255);
 }
+.pageActivo{
+  text-decoration: underline;
+  color: rgb(41, 223, 255);
+}
+/*ITEM LIST*/
 h1{
   text-align: center;
 }
@@ -76,20 +80,61 @@ h1{
 }
 .Imagen{
   width: 50%;
-  height: 220px;
 }
 .ImagenDetalle{
   border: grey 3px solid;
   border-radius: 10px;
 }
-.ContenedorDetalle{
-  text-align: center;
+.ContenedorItemDetail{
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  height: 700px;
   background-color: rgb(217, 246, 255);
+  padding: 20px 0px 30px 0px;
 }
-.Detalle{
-  padding: 20px 0px 20px 0px;
+
+/*ITEM DETAIL + ITEM COUNT*/
+.ContenedorDetalle{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.Cantidad{
+  padding: 0px;
+}
+.ItemCountDetalle{
+  width: 300px;
+  height: auto;
+  margin: 20px;
+}
+.ItemCountDetalle h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+.ItemCountDetalle h3{
+  font-size: 35px;
+  color: black;
+  font-weight: 400;
+  padding: 10px 0px 20px 0px;
+}
+.ItemCountDetalle h4{
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0px 0px 15px 0px;
+}
+.ItemCountDetalle h5{
+  font-size: 20px;
+  font-weight: 350;
+}
+.ItemCountDetalle h6{
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(126, 123, 123);
+  padding-top: 10px;
+}
+.ItemCountDetalle div{
+  justify-self: end;
 }
 .ContenedorProductos{
   text-align: center;
@@ -100,8 +145,16 @@ h1{
 }
 .ContenedorBotonesNegPos{
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+.ContenedorBotonesNegPos div{
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
 }
 .BotonNegativo{
   width: 25px;
@@ -166,6 +219,7 @@ h1{
   height: 30px;
   color: white;
   background-color: rgb(105, 115, 122);
+  margin-bottom: 20px;
 }
 .BotonCarritoVaciar{
   width: 250px;
@@ -194,18 +248,22 @@ h1{
   margin: auto;
   height: 300px;
   justify-content: space-evenly;
-  width: 30%;
+  width: 50%;
+  padding: 50px 0px 50px 0px;
+}
+.ContenedorFormulario input{
+  height: 30px;
+  border: 2px solid rgb(43, 43, 48);
+  margin: 5px 0px 5px 0px;  
 }
 .ContenedorFormulario--citys{
   display: flex;
   flex-direction: row;
   justify-content: left;
-  width: 100%;
   padding: 5px 0px 5px 0px;
 }
-.ContenedorFormulario input{
-  height: 30px;
-  border: 2px solid rgb(43, 43, 48)
+.ContenedorFormulario--citys input{
+  margin-right: 10px;
 }
 .ContenedorFormulario button{
   height: 50px;
@@ -214,6 +272,9 @@ h1{
   align-self:flex-end;
   font-size: 15px;
   background-color: rgb(37, 131, 37);
+}
+.ContenedorFormulario button:hover{
+  background-color: rgb(88, 167, 88);
 }
 .ContenedorFormularioFin{
   text-align: center;
@@ -236,6 +297,7 @@ h1{
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+
 /*ANIMACION CARGA*/
 @keyframes rotacion{
   from{
@@ -245,9 +307,20 @@ h1{
       transform: rotate(360deg);
   }
 }
+/*ABOUT*/
+.About{
+  margin: auto;
+  width: 50%;
+  height: 700px;
+  padding: 50px 0px 50px 0px;
+}
+.About h2{
+  text-align: center;
+}
 /*FOOTER*/
 .Footer{
   text-align: center;
+  vertical-align: bottom;
   padding: 50px 0px 50px 0px;
   width: 100%;
   height: 100%;
@@ -271,4 +344,117 @@ h3{
 .GitHub{
   text-decoration: none;
   color: white
+}
+/*NOTEBOOKS/BABLETS*/
+@media only screen and (max-width:963px){
+  ul{
+    width: 70%;
+    font-size: 15px;
+  }
+  .carrito{
+    height: 20px;
+  }
+  .TiendaLogo{
+    height: 40%;
+  }
+  .About{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    padding: 50px 0px 50px 0px;
+  }
+  .ContenedorCompra{
+    text-align: center;
+    width: 80%;
+  }
+  .ContenedorFormulario{
+    width: 80%;
+  }
+  .BotonFinCompra{
+    height: 50px;
+  }
+  .BotonCarritoVaciar{
+    height: 50px;
+  }
+  .ContenedorItemDetail{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .ContenedorDetalle div{
+    margin: auto;
+  }
+}
+@media only screen and (max-width:700px){
+  .menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: linear-gradient(#373549, rgb(35, 51, 65));
+    position: relative;
+  }
+  .menu div{
+    margin: 10px 0px 10px 0px;
+  }
+  .LinkNavBar:hover{
+    color: white;
+    background-color: rgb(41, 223, 255);
+  }
+  .pageActivo{
+    text-decoration: underline;
+    color: rgb(41, 223, 255);
+  }
+  .carrito{
+    width: 60px;
+    height: auto;
+  }
+  .carritoContador{
+    color: white;
+    font-size: 30px;
+    background-color: #ff0000;
+  }
+  .TiendaLogo{
+    width: 70%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+  }
+  ul{
+    flex-direction: column;
+    font-weight: bold;
+    width: 80%;
+    font-size: 30px;
+  }
+  ul li{
+    padding: 10px 0px 10px 0px;
+  }
+  .ContenedorFormulario{
+    width: 80%;
+    height: 100%;
+  }
+  .ContenedorFormulario--citys{
+    flex-direction: column;
+  }
+  .ContenedorFormulario input{
+    height: 40px;
+    border: 3px solid rgb(43, 43, 48);
+    margin: 5px 0px 5px 0px;
+  }
+  .BotonDetalle{
+    height: 40px; 
+  }
+  .BotonFinCompra{
+    height: 60px;
+  }
+  .BotonCarritoVaciar{
+    height: 60px;
+  }
+  .ImagenDetalle{
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .ItemCountDetalle{
+    width: 90%;
+    height: auto;
+  }
 }

@@ -36,7 +36,6 @@ export default function Form() {
         }
         orders.add(getOrder)
             .then(({ id }) => {
-                console.log("Orden N°" + id);
                 setOrdenID(id);
             })
             .catch((err) => {

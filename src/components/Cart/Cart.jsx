@@ -19,7 +19,7 @@ const Cart = () => {
                     { carrito.map(e => <CartItem key={e.item.id} prod={e} />) }
                     <div>
                         <p className="CarritoTotal">Total: ${fullPrice()}</p>
-                        <button className="BotonFinCompra"><Link to={"/finalizar"}>Finalizar mi compra</Link></button>
+                        <button className="BotonFinCompra"><Link className="Link" to={"/finalizar"}>Finalizar mi compra</Link></button>
                         <br />
                         <button className="BotonCarritoVaciar" onClick={() => clear()}>Vaciar</button>
                     </div>

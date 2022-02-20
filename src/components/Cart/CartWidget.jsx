@@ -6,15 +6,11 @@ import carrito from "../../img/carrito.png"
 const CartWidget = () => {
 
     const { amountInCart } = useContext(cartContext)
-    
+
     return (
         <>
             <div>
-                <button className="BotonCarrito">
-                    <Link to={"/cart"}>
-                        <img className="carrito" src={carrito} alt="carrito" />
-                    </Link>
-                </button>
+                <Link to={"/cart"}><img className="carrito" src={carrito} alt="carrito" /> </Link>
                 <span className="carritoContador">{amountInCart()}</span>
             </div>
         </>
@@ -22,5 +18,3 @@ const CartWidget = () => {
 }
 
 export default CartWidget
-
-// <span className="carritoContador">{amountInCart()}</span>
