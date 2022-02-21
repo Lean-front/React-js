@@ -6,22 +6,30 @@ Tienda e-commerce de computación; consta de 3 categorías (celulares, tablets y
 
 Navegación:
 
-![App](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/iphone11.png?alt=media&token=002d4dc9-7395-4a93-ad49-1502d464a0f8)
+![App](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/navegacion.gif?alt=media&token=b8ccc13a-fe51-4bc2-92cf-cce581c81f69)
 
-Producto particular:
+Para todas las pantallas:
 
-Compra: 
+![Responsive](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/responsive.gif?alt=media&token=5aa268e5-2ebb-4f29-9eac-17c7eefc1fe1)
+
+Carrito: 
+
+![Orden](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/item.gif?alt=media&token=cc4c0d04-64ea-4ee3-bc26-9dec7e416313)
+
+Finalizar compra: 
+
+![Orden](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/orden.gif?alt=media&token=a0157944-f93e-4f18-b0e3-97f4618cfb21)
+
+## ⚙️ Ver online
+Visitar la página online, click aqui.
+Para iniciar el archivo de manera local:
+
+```bash
+  npm start
+```
 
 ## 📝 Autor
 
 - [Leandro Benavides](https://github.com/Lean-front)
 
-
-## ⚙️ Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
 

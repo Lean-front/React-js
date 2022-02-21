@@ -11,7 +11,7 @@ export default function Contact() {
                 <input type="text" name="mobile" placeholder="Celular" />
                 <p>Desarrolle su consulta:</p>
                 <textarea placeholder="haga su consulta" cols="30" rows="10"></textarea>
-                <button>Enviar</button>
+                <button type="reset">Enviar</button>
             </div>
         </>
     )
