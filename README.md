@@ -1,6 +1,6 @@
 # 🖥️ Tecno-Shop!
 
-Tienda e-commerce de computación; consta de 3 categorías (celulares, tablets y notebooks) las cuales se pueden filtar y ver los detalles de cada producto de forma individual y detallada. Se pueden comprar productos hasta acabar stock. El carrito registra las compras del usuario mostrando las cantidades de cada producto adquirido y el monto total a pagar. Para finalizar, el comprador debe completar un formulario con datos personales para poder confirmar su compra y la App le generará un número de orden aprobando su compra. 
+Tienda e-commerce de computación; consta de 3 categorías (celulares, tablets y notebooks) las cuales se pueden filtar y ver los detalles de cada producto de forma individual y completa. Se pueden comprar productos hasta acabar stock. El carrito registra las compras del usuario mostrando las cantidades de cada producto adquirido y el monto total a pagar. Para finalizar, el comprador debe completar un formulario con datos personales para poder confirmar su compra y la App le generará un número de orden aprobando su compra. 
 
 ## 💡 Demo
 
@@ -21,7 +21,7 @@ Finalizar compra:
 ![Orden](https://firebasestorage.googleapis.com/v0/b/tecnoshop-6bc69.appspot.com/o/orden.gif?alt=media&token=a0157944-f93e-4f18-b0e3-97f4618cfb21)
 
 ## ⚙️ Ver online
-Visitar la página online, click aqui.
+Visitar la página online, [click aquí.](https://tecno-shop.netlify.app/)
 
 Para iniciar el archivo de manera local:
 
