@@ -22,6 +22,7 @@ Finalizar compra:
 
 ## ⚙️ Ver online
 Visitar la página online, click aqui.
+
 Para iniciar el archivo de manera local:
 
 ```bash

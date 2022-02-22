@@ -12,10 +12,10 @@ import About from './components/Pages/About';
 import Contact from './components/Pages/Contact';
 
 function App() {
-  
+
   return (
     <>
-     <CartProvider>
+      <CartProvider>
         <BrowserRouter>
           <div className="menu">
             <NavBar />
@@ -28,19 +28,32 @@ function App() {
               </div>
             </Route>
             <Route path="/categoria/:categoriaId">
-              <div className='Productos'>
-                <ItemListContainer />
+              <div className='ContenedorMain'>
+                <div className='Productos'>
+                  <ItemListContainer />
+                </div>
               </div>
             </Route>
             <Route path="/item/:itemId">
               <ItemDetailContainer />
             </Route>
             <Route exact path="/sobre"><About /></Route>
-            <Route exact path="/contacto"><Contact /></Route>
-            <Route path="/cart"><Cart /></Route>
-            <Route path="/finalizar"><Form /></Route>
+            <Route exact path="/contacto">
+              <div className='ContenedorMain'>
+                <Contact />
+              </div>
+            </Route>
+            <Route path="/cart">
+              <div className='ContenedorMain'>
+                <Cart />
+              </div>
+            </Route>
+            <Route path="/finalizar">
+              <div className='ContenedorMain'>
+                <Form />
+              </div>
+            </Route>
           </Switch>
-          <br />
           <Footer />
         </BrowserRouter>
       </CartProvider>
